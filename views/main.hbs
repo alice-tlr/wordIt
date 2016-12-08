@@ -29,10 +29,12 @@
   <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body>
-{{displayWords}}
+{{scramble}}
 
-<form name="resWords" action="resWords" method="post">
+<form name="resWords" action="/guessword" method="post">
   <input type="text" placeholder="Enter your word here">
+  <input type="hidden" name="id" value="{{id}}">
+
   <button type="submit" name="button">Submit Me Please</button>
 </form>
 
