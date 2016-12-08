@@ -3,6 +3,7 @@ var express = require('express')
 module.exports = {
   get: get,
   guessWord: guessWord
+  matchWord:matchWord
 }
 
 var wordsArray = [{
@@ -36,10 +37,16 @@ function get(req, res){
  res.render('main',word)
 }
 
+
 function guessWord(req,res){
-  console.log(req.body)
   var guessDone = req.body
+  console.log(req.body)
   res.render("main", guessDone)
+}
+
+function matchWord(){
+  if(guessWord() )
+
 }
 
 // var displaywords = "";
