@@ -31,11 +31,10 @@
 <body>
 {{scramble}}
 
-<form name="resWords" action="/guessword" method="post">
-  <input type="text" placeholder="Enter your word here">
+<form name="guessWord" action="/guessword" method="post">
+  <input name="guess" type="text" placeholder="Enter your word here">
   <input type="hidden" name="id" value="{{id}}">
-
-  <button type="submit" name="button">Submit Me Please</button>
+  <button type="submit">Submit Me Please</button>
 </form>
 
 

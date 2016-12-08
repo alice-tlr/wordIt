@@ -1,9 +1,9 @@
 var express = require('express')
 
 module.exports = {
-  get: get
+  get: get,
+  guessWord: guessWord
 }
-
 
 var wordsArray = [{
   word:'banane',
@@ -31,27 +31,21 @@ var wordsArray = [{
   id:6
 }]
 
-
-
 function get(req, res){
   var word = wordsArray[0]
  res.render('main',word)
 }
 
-
-
-var displaywords = "";
-
-function displayWord(){
-  for(var i = 0; i<wordsArray.length; i++){
-    console.log(wordsArray[word[1]])
-  }
+function guessWord(req,res){
+  console.log(req.body)
+  var guessDone = req.body
+  res.render("main", guessDone)
 }
 
-
-function resWords(){
-
-}
-
-
-function matchWord(){}
+// var displaywords = "";
+//
+// function displayWord(){
+//   for(var i = 0; i<wordsArray.length; i++){
+//     console.log(wordsArray[word[1]])
+//   }
+// }

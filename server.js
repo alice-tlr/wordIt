@@ -15,5 +15,6 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 //Routes
 app.get('/', route.get)
+app.post('/guessword', route.guessWord)
 
 module.exports = app
