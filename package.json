@@ -1,0 +1,28 @@
+{
+  "name": "wordit",
+  "version": "1.0.0",
+  "description": "Find the scramble word if you want to be successful in your life  ",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --inspect index.js"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/annagjackson/wordIt.git"
+  },
+  "author": "Da scrambleling team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/annagjackson/wordIt/issues"
+  },
+  "homepage": "https://github.com/annagjackson/wordIt#readme"
+}
