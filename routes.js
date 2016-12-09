@@ -3,7 +3,7 @@ var express = require('express')
 module.exports = {
   get: get,
   guessWord: guessWord
-  matchWord:matchWord
+  // matchWord:matchWord
 }
 
 var wordsArray = [{
@@ -42,12 +42,32 @@ function guessWord(req,res){
   var guessDone = req.body
   console.log(req.body)
   res.render("main", guessDone)
+  var matchWord =  guessDone.match(wordsArray[0].word)
+  var matchid  = guessDone.match(wordsArray[0].id)
+    if(matchWord === true && matchid === true){
+      return 'Congrats, You word IT'
+    }else {return 'Try again'
+  }
 }
 
-function matchWord(){
-  if(guessWord() )
+// function matchWords(){
+//
+//   if(matched = true ){
+//     return "Congrats!"
+//   }else{
+//     return "Try again"
+//   }
+//   console.log(matchWords)
+// }
 
-}
+
+
+
+// guessDone.
+// function matchWord(){
+//   if(guessWord() )
+//
+// }
 
 // var displaywords = "";
 //
