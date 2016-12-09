@@ -34,19 +34,20 @@ var wordsArray = [{
 
 function get(req, res){
   var word = wordsArray[0]
- res.render('main',word)
+  res.render('main', word)
 }
 
-
 function guessWord(req,res){
-  var guessDone = req.body
-  console.log(req.body)
-  res.render("main", guessDone)
-  var matchWord =  guessDone.match(wordsArray[0].word)
-  var matchid  = guessDone.match(wordsArray[0].id)
-    if(matchWord === true && matchid === true){
-      return 'Congrats, You word IT'
-    }else {return 'Try again'
+  var guess = req.body.guess
+  var idx = Number(req.body.id) - 1
+  var pair = wordsArray[idx]
+
+  if (guess === pair.word ) {
+    console.log('Congrats, You word IT')
+    res.redirect('/tryagain')
+  } else {
+    console.log('Try again')
+    res.redirect('/correct')
   }
 }
 
