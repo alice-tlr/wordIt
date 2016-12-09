@@ -20,22 +20,32 @@
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" rel="stylesheet">
-  <link href="public/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" >
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" >
+  <link rel="stylesheet" href="/main.css">
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body>
+
+  <!-- main content -->
+  <div class = "container">
+
+
+
 {{displayWords}}
+    <div class = "mainContent">
+      <form name="resWords" action="resWords" method="post">
+        <input type="text" placeholder="Enter your word here">
+        <div class = "submitButton">
+        <button type="submit" name="button">Submit Me Please</button>
+      </form>
 
-<form name="resWords" action="resWords" method="post">
-  <input type="text" placeholder="Enter your word here">
-  <button type="submit" name="button">Submit Me Please</button>
-</form>
+    </div><!--end of mainContent-->
 
+  </div> <!--end of container div -->
 
 </body>
 </html>
