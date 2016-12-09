@@ -1,13 +1,8 @@
 
+{{scramble}}
 
-  <div class = "mainContent">
-
-{{displayWords}}
-
-      <form name="resWords" action="resWords" method="post">
-        <input type="text" placeholder="Enter your word here">
-        <div class = "submitButton">
-        <button type="submit" name="button">Submit Me Please</button>
-      </form>
-
-    </div><!--end of mainContent-->
+<form name="guessWord" action="/guessword" method="post">
+  <input name="guess" type="text" placeholder="Enter your word here">
+  <input type="hidden" name="id" value="{{id}}">
+  <button type="submit">Submit Me Please</button>
+</form>
