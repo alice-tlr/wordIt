@@ -20,23 +20,22 @@
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" rel="stylesheet">
-  <link href="public/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" >
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" >
+  <link rel="stylesheet" href="/main.css">
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body>
-{{scramble}}
 
-<form name="guessWord" action="/guessword" method="post">
-  <input name="guess" type="text" placeholder="Enter your word here">
-  <input type="hidden" name="id" value="{{id}}">
-  <button type="submit">Submit Me Please</button>
-</form>
+  <!-- main content -->
+  <div class = "container">
 
+{{{body}}}
+
+  </div> <!--end of container div -->
 
 </body>
 </html>
