@@ -1,12 +1,27 @@
 
-.container {
-  background-color: yellow;
+h1 {
+  font-size: 15.0rem;
 }
 
-.mainContent {
-  background-color: red;
+body{
+  background-color: #fff4af;
 }
 
-.submitButton {
-  
+
+.submit-button {
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+}
+
+.display-word {
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+}
+
+.user-entry {
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
 }

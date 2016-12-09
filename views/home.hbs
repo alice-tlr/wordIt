@@ -1,8 +1,26 @@
+<div class = "row">
+  <div class = "display-word">
+    <div class ="twelve">
+      <h1>{{scramble}}</h1>
+    </div>
+  </div>
+</div>
 
-{{scramble}}
+<div class = "row">
+  <div class = "user-entry">
+    <div class ="twelve">
+      <h1>
+      <form name="guessWord" action="/guessword" method="post">
+        <input name="guess" type="text" placeholder="Enter your word here">
+        <input type="hidden" name="id" value="{{id}}">
+      </form>
+    </h1>
+    </div>
+  </div>
+</div>
 
-<form name="guessWord" action="/guessword" method="post">
-  <input name="guess" type="text" placeholder="Enter your word here">
-  <input type="hidden" name="id" value="{{id}}">
-  <button type="submit">Submit Me Please</button>
-</form>
+<div class = "submit-button">
+  <div class ="twelve">
+    <button type="submit">Submit Me Please</button>
+  </div>
+</div>
