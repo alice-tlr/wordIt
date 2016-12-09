@@ -2,7 +2,9 @@ var express = require('express')
 
 module.exports = {
   get: get,
-  guessWord: guessWord
+  guessWord: guessWord,
+  tryagain: tryagain,
+  correct: correct
   // matchWord:matchWord
 }
 
@@ -32,21 +34,37 @@ var wordsArray = [{
   id:6
 }]
 
-function get(req, res){
+function get(req, res) {
   var word = wordsArray[0]
- res.render('home',word)
+  res.render('home', word)
 }
 
-function guessWord(req,res){
+function tryagain(req, res) {
+  var scrambles = {
+    id: Number(req.query.id) + 1,
+    scramble: wordsArray[Number(req.query.id)].scramble
+  }
+   res.render('tryagain', scrambles)
+}
+
+function correct(req, res) {
+  var scrambles = {
+    id: Number(req.query.id) + 1,
+    scramble: wordsArray[Number(req.query.id)].scramble
+  }
+   res.render('correct', scrambles)
+}
+
+function guessWord(req, res){
   var guess = req.body.guess
-  var idx = Number(req.body.id) -1
+  var idx = Number(req.body.id) - 1
   var pair = wordsArray[idx]
+  console.log(idx)
 
   if (guess === pair.word ) {
-    console.log('Congrats, You word IT')
-    // res.redirect('/tryagain')
+    res.redirect('/correct/?id=' + (idx + 1))
   } else {
-    console.log('Try again')
+    res.redirect('/tryagain/?id=' + idx)
     // res.redirect('/correct')
   }
 }

@@ -5,23 +5,33 @@ h1 {
 
 body{
   background-color: #fff4af;
+
 }
 
+button{
+  height: 100px;
+  background-color: #79d2ea;
+}
+
+form {
+
+}
 
 .submit-button {
   text-align: center;
   padding: 20px;
   margin: 20px;
+
 }
 
 .display-word {
   text-align: center;
-  padding: 20px;
+  padding-top: 20px;
   margin: 20px;
 }
 
 .user-entry {
   text-align: center;
-  padding: 20px;
-  margin: 20px;
+  padding: 10px;
+
 }

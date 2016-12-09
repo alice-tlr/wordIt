@@ -19,6 +19,8 @@ app.use(express.static('public'))
 
 //Routes
 app.get('/', route.get)
+app.get('/tryagain', route.tryagain)
+app.get('/correct', route.correct)
 app.post('/guessword', route.guessWord)
 
 module.exports = app
